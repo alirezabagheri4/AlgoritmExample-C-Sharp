@@ -1,0 +1,9 @@
+﻿namespace Algoritm3_Method3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+        }
+    }
+}
