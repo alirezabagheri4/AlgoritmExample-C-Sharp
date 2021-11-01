@@ -17,9 +17,9 @@ namespace algo
                 yield return i;
             }
         }
+
         static void Main(string[] args)
         {
-
             int n = Convert.ToInt32(Console.ReadLine());
             foreach (var i in f(n))
             {
@@ -30,7 +30,7 @@ namespace algo
 
                 foreach (var j in f(i))
                 {
-                    Console.Write($"{j} ");
+                    Console.Write($"{j}");
                 }
 
                 Console.WriteLine("");
