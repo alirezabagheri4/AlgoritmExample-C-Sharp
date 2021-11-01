@@ -1,6 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Algoritm6
+namespace Algoritm7
 {
     class Program
     {
@@ -9,20 +13,21 @@ namespace Algoritm6
             Console.WriteLine("Please inter number");
             int input = Convert.ToInt32(Console.ReadLine());
 
+            int[,] array = new int[input, input];
+
             for (var i = 1; i <= input; i++)
             {
                 for (var z = 1; z <= input; z++)
                 {
-                    if (i == z)
-                    {
-                        Console.Write("X");
-                    }
+                    array[i - 1, z - 1] = i * z;
+                }
+            }
 
-                    if (z == input - i + 1)
-                    {
-                        Console.Write("X");
-                    }
-                    Console.Write("+");
+            for (var i = 0; i < input; i++)
+            {
+                for (var z = 0; z < input; z++)
+                {
+                    Console.Write(array[i, z] + "\t");
                 }
                 Console.WriteLine();
             }
